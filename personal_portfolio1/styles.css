@@ -1,0 +1,101 @@
+:root {
+  --background-color: #e9f1fa;
+  --font-color: #333333;
+  --primary-color: #00abe4;
+  --secondary-color: white;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--font-color);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  background-color: var(--primary-color);
+  color: var(--font-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  margin: 2vw;
+  color: var(--secondary-color);
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  list-style: none;
+  padding: 2rem;
+  margin: 0;
+}
+
+#home,
+#about,
+#projects,
+#contacts {
+  margin: 3vw;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: var(--font-color);
+  font-size: clamp(0.5rem, 2.5vw, 1rem);
+  font-weight: bold;
+  color: var(--secondary-color);
+  transition: color 0.3s ease-in-out, padding 0.2s ease-in-out;
+}
+.nav-list li a:hover {
+  padding: 1rem;
+  background-color: var(--secondary-color);
+  color: var(--font-color);
+}
+
+#home {
+  display: flex;
+  gap: 5vw;
+  color: var(--font-color);
+}
+
+#home h2 {
+  white-space: nowrap;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+.project {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 10px;
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-list {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .nav-list li a {
+    font-size: 1rem;
+  }
+
+  #home {
+    flex-direction: column;
+    text-align: center;
+  }
+}

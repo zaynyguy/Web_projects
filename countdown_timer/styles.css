@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background-color: rgb(74, 74, 74);
+}
+.clock {
+    display: flex;
+    column-gap: 10px;
+    padding: 20px;
+    
+}
+.hours, .minutes, .seconds {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    
+}
+
+.clock button {
+    width: 100%;
+    font-size: 2rem;
+}
+
+.clock div {
+    font-size: 5rem;
+    font-family: 'Orbitron';
+    background-color: rgb(219, 219, 219);
+    color: rgb(74, 74, 74);
+}
+
+.minutes div {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(74, 74, 74);
+    color: white;
+    border-top: solid rgb(74, 74, 74);
+    border-bottom: solid rgb(74, 74, 74);
+    width: 150px;
+}
+.minutes button {
+    background-color: rgb(74, 74, 74);
+    color: white;
+    border: solid 2px white;
+}
+
+.hours button, .seconds button {
+    background-color: rgb(219, 219, 219);
+    border: solid 2px rgb(219, 219, 219);
+}
+
+.hours div, .seconds div {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(219, 219, 219);
+    border-top: solid;
+    border-bottom: solid;
+    width: 150px;
+    
+}
+
+.minutes button:hover {
+    background-color: rgb(219, 219, 219);
+    color: rgb(74, 74, 74);
+    border: solid 2px rgb(74, 74, 74);
+}
+
+.hours button:hover, .seconds button:hover {
+    background-color: rgb(74, 74, 74);
+    color: white;
+    border: solid 2px white;
+}
+
+.hidden-button button{
+    display: none;
+}
